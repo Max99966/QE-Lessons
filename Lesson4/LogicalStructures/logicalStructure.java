@@ -1,4 +1,5 @@
-package Lesson4;
+package Lesson4.LogicalStructures;
+
 import java.util.Scanner;
 public class logicalStructure {
     public static void main(String[] args) {

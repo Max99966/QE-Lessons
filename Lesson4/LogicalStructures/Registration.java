@@ -1,7 +1,4 @@
-package Lesson4;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package Lesson4.LogicalStructures;
 
 public class Registration {
     private String firstName;
