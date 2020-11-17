@@ -33,7 +33,9 @@ public class Plane {
     }
 
     public void setModel(String model) {
-        this.model = model;
+        if (model != null){
+            this.model = model;
+        }
     }
 
     public String getCountry() {
@@ -41,7 +43,9 @@ public class Plane {
     }
 
     public void setCountry(String country) {
-        this.country = country;
+        if (country != null){
+            this.country = country;
+        }
     }
 
     public int getYear() {
@@ -49,7 +53,9 @@ public class Plane {
     }
 
     public void setYear(int year) {
-        this.year = year;
+        if (year >= 1903 && year <= 2020){
+            this.year = year;
+        }
     }
 
     public int getHours() {
@@ -57,7 +63,9 @@ public class Plane {
     }
 
     public void setHours(int hours) {
-        this.hours = hours;
+        if (hours >= 0 && hours <= 10000){
+            this.hours = hours;
+        }
     }
 
     public boolean isMilitary() {
@@ -73,7 +81,9 @@ public class Plane {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        if (weight >= 1000 && weight <= 160000){
+            this.weight = weight;
+        }
     }
 
     public int getWingspan() {
@@ -81,7 +91,9 @@ public class Plane {
     }
 
     public void setWingspan(int wingspan) {
-        this.wingspan = wingspan;
+        if (wingspan >= 10 && wingspan <= 45){
+            this.wingspan = wingspan;
+        }
     }
 
     public int getTopSpeed() {
@@ -89,7 +101,9 @@ public class Plane {
     }
 
     public void setTopSpeed(int topSpeed) {
-        this.topSpeed = topSpeed;
+        if (topSpeed >= 0){
+            this.topSpeed = topSpeed;
+        }
     }
 
     public int getSeats() {
@@ -97,7 +111,9 @@ public class Plane {
     }
 
     public void setSeats(int seats) {
-        this.seats = seats;
+        if (seats >= 0){
+            this.seats = seats;
+        }
     }
 
     public int getCost() {
@@ -105,25 +121,9 @@ public class Plane {
     }
 
     public void setCost(int cost) {
-        this.cost = cost;
-    }
-
-    //    Task 1.
-//    Create function:
-//    Parameter one Plane
-//    Result: print all information of the plane
-
-    public void printInfo() {
-        System.out.println("Model: " + model);
-        System.out.println("Country: " + country);
-        System.out.println("Year: " + year);
-        System.out.println("Hours: " + hours);
-        System.out.println("Military: " + (military ? "Yes" : "No"));
-        System.out.println("Weight: " + weight);
-        System.out.println("Wingspan: " + wingspan);
-        System.out.println("Top Speed: " + topSpeed);
-        System.out.println("Seats: " + seats);
-        System.out.println("Cost: " + cost + " $");
+        if (cost >= 0){
+            this.cost = cost;
+        }
     }
 
 }

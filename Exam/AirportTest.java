@@ -1,7 +1,5 @@
 package Exam;
 
-import java.security.Provider;
-
 public class AirportTest {
     public static void main(String[] args) {
         PlaneService service = new PlaneService();
@@ -10,7 +8,7 @@ public class AirportTest {
         Plane plane3 = service.create();
         Plane [] planes = {plane1, plane2, plane3};
         System.out.println("Task 1");
-        plane1.printInfo();
+        service.printTask1(plane1);
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 2");
@@ -18,7 +16,8 @@ public class AirportTest {
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 3");
-        System.out.println(service.printTask3(plane1, plane2));
+        service.printTask3(plane1, plane2);
+        //System.out.println(service.printTask3(plane1, plane2));
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 4");
@@ -26,7 +25,7 @@ public class AirportTest {
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 5");
-        service.printTask5(planes);
+        service.printTask5(plane1, plane2, plane3);
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 6");
@@ -38,11 +37,11 @@ public class AirportTest {
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 8");
-        System.out.println(service.printTask8(planes));
+        service.printTask8(planes);
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 9");
-        System.out.println(service.printTask9(planes));
+        service.printTask9(planes);
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 10");
