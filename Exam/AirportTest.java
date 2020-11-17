@@ -16,8 +16,7 @@ public class AirportTest {
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 3");
-        service.printTask3(plane1, plane2);
-        //System.out.println(service.printTask3(plane1, plane2));
+        System.out.println(service.printTask3(plane1, plane2));
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 4");
@@ -37,11 +36,11 @@ public class AirportTest {
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 8");
-        service.printTask8(planes);
+        System.out.println(service.printTask8(planes));
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 9");
-        service.printTask9(planes);
+        System.out.println(service.printTask9(planes));
         System.out.println("***********");
         System.out.println();
         System.out.println("Task 10");
