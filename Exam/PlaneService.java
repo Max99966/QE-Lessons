@@ -67,11 +67,11 @@ public class PlaneService {
 //    Create function:
 //    Parameter two Planes
 //    Result: return the plane which one is newer (if they have the same age return first one).
-    public Plane printTask3(Plane p1, Plane p2) {
+    public void printTask3(Plane p1, Plane p2) {
         if (p1.getYear() >= p2.getYear()) {
-            return p1;
+            printTask1(p1);
         } else {
-            return p2;
+            printTask1(p2);
         }
     }
 
@@ -97,7 +97,7 @@ public class PlaneService {
     public void printTask5(Plane p1, Plane p2, Plane p3) {
         if (p1.getSeats() < p2.getSeats() && p1.getSeats() < p3.getSeats()) {
             System.out.println(p1.getCountry());
-        } else if (p2.getSeats() < p3.getSeats() && p2.getSeats() < p1.getSeats()) {
+        } else if (p2.getSeats() < p3.getSeats()) {
             System.out.println(p2.getCountry());
         } else {
             System.out.println(p3.getCountry());
@@ -113,7 +113,8 @@ public class PlaneService {
             if (plane.isMilitary()) {
                 continue;
             }
-            System.out.println(plane);
+            printTask1(plane);
+            System.out.println();
         }
     }
 //    Task 7. (score 10)
@@ -124,7 +125,8 @@ public class PlaneService {
     public void printTask7(Plane[] planes) {
         for (Plane plane : planes) {
             if (plane.getHours() > 100 && plane.isMilitary()) {
-                System.out.println(plane);
+                printTask1(plane);
+                System.out.println();
             }
         }
     }
@@ -133,14 +135,15 @@ public class PlaneService {
 //    Create function:
 //    Parameter array of Planes
 //    Result: return the plane with minimal weight (if there are some of them return last one).
-    public Plane printTask8(Plane[] planes) {
+    public void printTask8(Plane[] planes) {
         Plane min = planes[0];
         for (int i = 1; i < planes.length; i++) {
             if (planes[i].getWeight() <= min.getWeight()) {
                 min = planes[i];
             }
         }
-        return min;
+        printTask1(min);
+        System.out.println();
     }
 
 //    Task 9. (score 10)
@@ -148,14 +151,18 @@ public class PlaneService {
 //    Parameter array of Planes
 //    Result: return the plane with minimal cost from all military planes (if there are some of them return first one).
 
-    public Plane printTask9(Plane[] planes) {
+    public void printTask9(Plane[] planes) {
         Plane min = planes[0];
         for (int i = 1; i < planes.length; i++) {
             if (planes[i].getCost() < min.getCost() && planes[i].isMilitary()) {
                 min = planes[i];
             }
         }
-        return min;
+        if (min.isMilitary()) {
+            printTask1(min);
+        } else {
+            System.out.println("There are no military planes");
+        }
     }
 //    Task 10. (score 12)
 //    Create function:
@@ -172,8 +179,9 @@ public class PlaneService {
                 }
             }
         }
-        for (Plane x : planes) {
-            System.out.print(x + " ");
+        for (int i = 0; i < planes.length - 1; i++) {
+            printTask1(planes[i]);
+            System.out.println();
         }
     }
 
