@@ -1,4 +1,4 @@
-package Exam;
+package Exam1;
 
 public class Plane {
     private String model = "Model";

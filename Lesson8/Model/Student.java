@@ -1,4 +1,4 @@
-package Lesson8;
+package Lesson8.Model;
 
 import java.util.Arrays;
 
@@ -10,16 +10,13 @@ public class Student {
     private char gender;
     private double mark;
 
-    public Student(String[] student) {
-
-    }
-
-    public static void printFullNames(String[] students){
-        String [] s;
-        for (int i = 0; i < students.length; i++) {
-            s = students[i].split(",");
-
-        }
+    public Student(String s){
+        String[] split = s.split(",");
+        firstName = split[0];
+        lastName = split[1];
+        year = Integer.parseInt(split[2]);
+        gender = split[3].charAt(0);
+        mark = Double.parseDouble(split[4]);
     }
 
     public String getFirstName() {

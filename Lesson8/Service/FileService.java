@@ -1,4 +1,4 @@
-package Lesson8;
+package Lesson8.Service;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,9 +9,6 @@ public class FileService {
     public static String[] read(String path) throws IOException {
         return Files.readAllLines(Paths.get(path)).toArray(new String[0]);
     }
-
-    //Task 1
-    //Print full names of students
 
 
 }

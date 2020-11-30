@@ -1,4 +1,4 @@
-package Exam;
+package Exam1;
 
 public class AirportTest {
     public static void main(String[] args) {
