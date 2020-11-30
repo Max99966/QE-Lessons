@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String[] read = FileService.read("C:\\Users\\Administrator\\Desktop\\QE Classes\\Homeworks\\test.txt");
+        String[] read = FileService.read("C:\\Users\\Administrator\\Desktop\\QE Classes\\Homeworks\\src\\Lesson8\\test.txt");
         System.out.println(Arrays.toString(read));
         Student student1 = new Student(read[0]);
         Student student2 = new Student(read[1]);
