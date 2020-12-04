@@ -1,37 +1,23 @@
 package ProjectTUMO;
 
 public class Human {
-
-    private String firstName = "Name";
+    private String firstName = "First Name";
     private String lastName = "Last Name";
-    private String middleName = null;
-    private String username;
+    private String userName;
+    private final String [] locations = {"Armenia", "Russia", "France", "Albania", "Germany", "Lebanon"};
+    private String location;
 
-    public Human(String firstName, String lastName) {
-        setFirstName(firstName);
-        setLastName(lastName);
-    }
-
-    public Human(String firstName, String lastName, String middleName) {
-        setFirstName(firstName);
-        setLastName(lastName);
-        setMiddleName(middleName);
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
 
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        if (firstName != null) {
+            this.firstName = firstName;
+        } else {
+            throw new NameException();
+        }
     }
 
     public String getLastName() {
@@ -39,15 +25,26 @@ public class Human {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        if (lastName != null) {
+            this.lastName = lastName;
+        } else {
+            throw new NameException();
+        }
     }
 
-    public String getUsername() {
-        username = getFirstName() + "." + getLastName();
-        return username.toLowerCase();
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
