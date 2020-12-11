@@ -1,4 +1,4 @@
-package ProjectTUMO;
+package ProjectTUMO.Exceptions;
 
 public class LocationException extends RuntimeException {
     @Override

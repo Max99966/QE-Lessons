@@ -1,4 +1,6 @@
-package ProjectTUMO;
+package ProjectTUMO.Model;
+
+import ProjectTUMO.Exceptions.NameException;
 
 public class Human {
     private String firstName = "First Name";
@@ -7,13 +9,20 @@ public class Human {
     private final String [] locations = {"Armenia", "Russia", "France", "Albania", "Germany", "Lebanon"};
     private String location;
 
+    public Human() {
+    }
+
+    public Human(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
-        if (firstName != null) {
+        if (firstName.matches("[A-Z][a-z]*") && !firstName.isEmpty()) {
             this.firstName = firstName;
         } else {
             throw new NameException();

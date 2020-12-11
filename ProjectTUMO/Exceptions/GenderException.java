@@ -1,4 +1,4 @@
-package ProjectTUMO;
+package ProjectTUMO.Exceptions;
 
 public class GenderException extends RuntimeException {
     @Override

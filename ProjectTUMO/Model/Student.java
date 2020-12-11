@@ -1,15 +1,12 @@
-package ProjectTUMO.Student;
+package ProjectTUMO.Model;
 
-import ProjectTUMO.GenderException;
-import ProjectTUMO.Human;
+import ProjectTUMO.Exceptions.GenderException;
 
-import java.sql.Time;
-import java.util.Date;
-import java.util.Locale;
+import java.time.LocalDate;
 
 public class Student extends Human {
     private char gender = 'f';
-    private String birthDay = "01-12-2008";
+    private LocalDate birthDay;
     private String tumoGmail;
 
     public char getGender() {
@@ -24,11 +21,11 @@ public class Student extends Human {
         }
     }
 
-    public String getBirthDay() {
+    public LocalDate getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(String birthDay) {
+    public void setBirthDay(LocalDate birthDay) {
         this.birthDay = birthDay;
     }
 

@@ -1,4 +1,5 @@
-package ProjectTUMO.Student;
+package ProjectTUMO.Service;
 
 public class StudentService {
+
 }
